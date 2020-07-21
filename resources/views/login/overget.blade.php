@@ -18,11 +18,11 @@
             <h4>找回密码</h4>
             <p class="p-input pos">
                 <label for="tel">密码</label>
-                <input type="number" id="tel" autocomplete="off">
+                <input type="password" id="tel" autocomplete="off">
             </p>
             <p class="p-input pos">
                 <label for="tel">确认密码</label>
-                <input type="number" id="tel" autocomplete="off">
+                <input type="password" id="tel" autocomplete="off">
             </p>
             <button class="lang-btn next">修改新密码</button>
         </div>

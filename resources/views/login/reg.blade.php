@@ -29,11 +29,11 @@
                 </p>
                 <p class="p-input pos">
                     <label for="tel">密码</label>
-                    <input type="number" name="user_pwd" id="tel" autocomplete="off">
+                    <input type="password" name="user_pwd" id="tel" autocomplete="off">
                 </p>
                 <p class="p-input pos">
                     <label for="tel">确认密码</label>
-                    <input type="number" name="repwd" id="tel" autocomplete="off">
+                    <input type="password" name="repwd" id="tel" autocomplete="off">
                 </p>
             </form>
             <button class="lang-btn" id="reg">注册</button>
@@ -95,7 +95,16 @@
                     url:"/login/do_reg",
                     type: 'post',
                     success:function(res){
-                        console.log(res);
+                        if(res.errno == '00000'){
+                            alert(res.msg)
+                        }else if(res.errno == '00001'){
+                            alert(res.msg);
+                        }else{
+                            var re = confirm("该手机号已经存在,是否找回密码");
+                            if(re == true){
+                                location.href = '/login/getpass';
+                            }
+                        }
                     }
                 })
             }
