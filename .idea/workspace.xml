@@ -151,18 +151,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/static/login/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/static/shop" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\192.168.170.100\data\wwwroot\test\resources\views" />
       <recent name="\\192.168.170.100\data\wwwroot\test\public\static" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\192.168.170.100\data\wwwroot\test\public\static\shop" />
       <recent name="\\192.168.170.100\data\wwwroot\test\public\static\login\js" />
       <recent name="\\192.168.170.100\data\wwwroot\test\public\static\login" />
       <recent name="\\192.168.170.100\data\wwwroot\test\resources\views" />
       <recent name="\\192.168.170.100\data\wwwroot\test\public" />
-      <recent name="\\192.168.170.100\data\wwwroot\test\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -206,10 +207,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="649" y="253" key="#Notifications/0.0.1536.834@0.0.1536.834" timestamp="1595243615362" />
-    <state x="599" y="336" key="NewPhpFileDialog" timestamp="1595289126931">
+    <state x="599" y="336" key="NewPhpFileDialog" timestamp="1595298946904">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="599" y="336" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1595289126931" />
+    <state x="599" y="336" key="NewPhpFileDialog/0.0.1536.834@0.0.1536.834" timestamp="1595298946904" />
     <state x="355" y="218" key="Registry" timestamp="1595292732806">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

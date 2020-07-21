@@ -25,3 +25,7 @@ Route::prefix('/login')->group(function(){
     Route::any('/sendcode','LoginController@sendcode');
     Route::any('/do_reg','LoginController@do_reg');
 });
+
+Route::prefix('/shop')->group(function(){
+    Route::get('/index','ShopController@index');
+});
