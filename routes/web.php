@@ -28,4 +28,7 @@ Route::prefix('/login')->group(function(){
 
 Route::prefix('/shop')->group(function(){
     Route::get('/index','ShopController@index');
+    Route::get('/brand_add','Index\BrandController@brand_add'); //分类添加视图
+    Route::post('/brand_add','Index\BrandController@brand_addDo'); //分类执行添加
 });
+
