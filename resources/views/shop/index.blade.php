@@ -411,7 +411,7 @@
 <div class="section product">
     <div class="container">
         <div class="section-head">
-            <h4>NEW PRODUCT</h4>
+            <h4>商品分类</h4>
             <div class="divider-top"></div>
             <div class="divider-bottom"></div>
         </div>
