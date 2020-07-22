@@ -325,6 +325,7 @@
             <h3>商品分类</h3>
         </div>
         <div class="input-field">
+<<<<<<< HEAD
             <select name="parent_id">
                    <option value="0">--请选择--</option>
                 @foreach($list as $v)
@@ -333,6 +334,15 @@
             </select>
         </div>
 
+=======
+            <select>
+                <option value="">--请选择--</option>
+                @foreach($cate_all_data as $k=>$v)
+                <option value="">{{$v['cat_name']}}</option>
+                    @endforeach
+            </select>
+        </div>
+>>>>>>> brand
         <div class="row">
             <div class="col s6">
                 <div class="content">
