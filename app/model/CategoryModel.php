@@ -3,10 +3,9 @@
 namespace App\model;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Support\Facades\DB;
 class CategoryModel extends Model
 {
-    protected $table = "cate";
-    protected $primaryKey = "cate_id";
-    public $timestamps = false;
+    public $table = 'p_category';
+    public $primaryKey = 'cat_id';
 }
