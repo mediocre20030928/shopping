@@ -4,7 +4,7 @@ namespace App\model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BrandModel extends Model
+class CategoryModel extends Model
 {
     protected $table = "cate";
     protected $primaryKey = "cate_id";
