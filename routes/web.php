@@ -28,4 +28,6 @@ Route::prefix('/login')->group(function(){
 
 Route::prefix('/shop')->group(function(){
     Route::get('/index','ShopController@index');
+    Route::get('/test1/ceater','ShopController@test1');
+
 });
