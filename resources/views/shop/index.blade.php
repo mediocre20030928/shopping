@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-@extends('.layout.script')
-        <!-- menu -->
-=======
 @extends('layout.link')
 <body>
 <!-- navbar top -->
@@ -39,7 +35,6 @@
         <!-- end navbar bottom -->
 
 <!-- menu -->
->>>>>>> master
 <div class="menus" id="animatedModal2">
     <div class="close-animatedModal2 close-icon">
         <i class="fa fa-close"></i>
@@ -223,7 +218,7 @@
                     <div class="cart-1">
                         <div class="row">
                             <div class="col s5">
-                                <img src="img/cart-menu1.png" alt="">
+                                <img src="/static/shop/img/cart-menu1.png" alt="">
                             </div>
                             <div class="col s7">
                                 <h5><a href="">Fashion Men's</a></h5>
@@ -258,7 +253,7 @@
                     <div class="cart-2">
                         <div class="row">
                             <div class="col s5">
-                                <img src="img/cart-menu2.png" alt="">
+                                <img  src="/static/shop/img/cart-menu2.png" alt="">
                             </div>
                             <div class="col s7">
                                 <h5><a href="">Fashion Men's</a></h5>
@@ -328,7 +323,7 @@
 
     <ul class="slides">
         <li>
-            <img src="img/slide1.jpg" alt="">
+            <img src="/static/shop/img/slide1.jpg" alt="">
             <div class="caption slider-content  center-align">
                 <h2>WELCOME TO MSTORE</h2>
                 <h4>Lorem ipsum dolor sit amet.</h4>
@@ -336,7 +331,7 @@
             </div>
         </li>
         <li>
-            <img src="img/slide2.jpg" alt="">
+            <img src="/static/shop/img/slide2.jpg" alt="">
             <div class="caption slider-content center-align">
                 <h2>JACKETS BUSINESS</h2>
                 <h4>Lorem ipsum dolor sit amet.</h4>
@@ -344,7 +339,7 @@
             </div>
         </li>
         <li>
-            <img src="img/slide3.jpg" alt="">
+            <img src="/static/shop/img/slide3.jpg" alt="">
             <div class="caption slider-content center-align">
                 <h2>FASHION SHOP</h2>
                 <h4>Lorem ipsum dolor sit amet.</h4>
@@ -416,147 +411,112 @@
             <div class="divider-bottom"></div>
         </div>
         <div class="row">
-<<<<<<< HEAD
-            @foreach($is_new as $v)
-                <div class="col s6">
-                    <div class="content">
-                        <a href="/test1/ceater"> <img src="{{$v->goods_img}}" alt=""></a>
-                        <h6><a href="">{{$v->goods_name}}</a></h6>
-                        <div class="price">
-                            ${{$v->shop_price}} <span></span>
-                        </div>
-                        <a href=""><button class="btn button-default">加入购物车</button></a>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-
-    </div>
-=======
             <div class="col s6">
                 @foreach($pwa as $v)
-                <div class="content">
-                    <img src="{{$v->goods_img}}" alt="">
-                    <h6><a href="">{{$v->goods_name}}</a></h6>
-                    <div class="price">
-                       ${{$v->shop_price}} <span>${{$v->click_count}}</span>
+                    <div class="content">
+                        <img src="{{$v->goods_img}}" alt="">
+                        <h6><a href="">{{$v->goods_name}}</a></h6>
+                        <div class="price">
+                            ${{$v->shop_price}} <span>${{$v->click_count}}</span>
+                        </div>
+                        <a href=""><button class="btn button-default"><font color="#a52a2a">加入购物车</font></button></a>
                     </div>
-                 <a href=""><button class="btn button-default"><font color="#a52a2a">加入购物车</font></button></a>
-                </div>
-                    @endforeach
+                @endforeach
             </div>
             <div class="col s6">
                 @foreach($get as $v)
-                <div class="content">
-                    <img src="{{$v->goods_img}}" alt="">
-                    <h6><a href="">{{$v->goods_name}}</a></h6>
-                    <div class="price">
-                        ${{$v->shop_price}} <span>${{$v->click_count}}</span>
-                    </div>
-                    <a href=""><button class="btn button-default"><font color="#a52a2a">加入购物车</font></button></a>
-                </div>
-                    @endforeach
-            </div>
->>>>>>> master
-</div>
-<!-- end product -->
-
-<!-- promo -->
-
-<!-- end promo -->
-
-<!-- product -->
-<div class="section product">
-    <div class="container">
-        <div class="section-head">
-            <hr>
-            <h4><font color="blue">商品最热</font></h4>
-            <div class="divider-top"></div>
-            <div class="divider-bottom"></div>
-        </div>
-        <div class="row">
-<<<<<<< HEAD
-            @foreach($best as $v)
-                <div class="col s6">
                     <div class="content">
-                        <a href="/detail"> <img src="{{$v->goods_img}}" alt=""></a>
-                        <h6>{{$v->goods_name}}</h6>
+                        <img src="{{$v->goods_img}}" alt="">
+                        <h6><a href="">{{$v->goods_name}}</a></h6>
                         <div class="price">
-                            ${{$v->shop_price}}
+                            ${{$v->shop_price}} <span>${{$v->click_count}}</span>
                         </div>
-                        <a href="/cart"><button class="btn button-default">加入购物车</button></a>
+                        <a href=""><button class="btn button-default"><font color="#a52a2a">加入购物车</font></button></a>
                     </div>
-=======
-            <div class="col s6">
-                <div class="content">
-                    @foreach($get as $v)
-                    <img src="{{$v->goods_img}}" alt="">
-                    <h6><a href="">{{$v->goods_name}}</a></h6>
-                    <div class="price">
-                        ${{$v->shop_price}} <span>${{$v->click_count}}</span>
+                @endforeach
+            </div>
+        </div>
+        <!-- end product -->
+
+        <!-- promo -->
+
+        <!-- end promo -->
+
+        <!-- product -->
+        <div class="section product">
+            <div class="container">
+                <div class="section-head">
+                    <hr>
+                    <h4><font color="blue">商品最热</font></h4>
+                    <div class="divider-top"></div>
+                    <div class="divider-bottom"></div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <div class="content">
+                            @foreach($get as $v)
+                                <img src="{{$v->goods_img}}" alt="">
+                                <h6><a href="">{{$v->goods_name}}</a></h6>
+                                <div class="price">
+                                    ${{$v->shop_price}} <span>${{$v->click_count}}</span>
+                                </div>
+                                <a href=""><button class="btn button-default"><font color="#8a2be2">加入购物车</font></button></a>
+                            @endforeach
+                        </div>
                     </div>
-                        <a href=""><button class="btn button-default"><font color="#8a2be2">加入购物车</font></button></a>
-                    @endforeach
+                    <div class="col s6">
+                        <div class="content">
+                            @foreach($pwa as $v)
+                                <img src="{{$v->goods_img}}" alt="">
+                                <h6><a href="">{{$v->goods_name}}</a></h6>
+                                <div class="price">
+                                    ${{$v->shop_price}} <span>${{$v->click_count}}</span>
+                                </div>
+                                <a href=""><button class="btn button-default"><font color="aqua">加入购物车</font></button></a>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination-product">
+                    <ul>
+                        <li class="active">1</li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="col s6">
-                <div class="content">
-                    @foreach($pwa as $v)
-                    <img src="{{$v->goods_img}}" alt="">
-                    <h6><a href="">{{$v->goods_name}}</a></h6>
-                    <div class="price">
-                        ${{$v->shop_price}} <span>${{$v->click_count}}</span>
-                    </div>
-                        <a href=""><button class="btn button-default"><font color="aqua">加入购物车</font></button></a>
-                    @endforeach
->>>>>>> master
+        </div>
+        <!-- end product -->
+
+        <!-- loader -->
+        <div id="fakeLoader"></div>
+        <!-- end loader -->
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="about-us-foot">
+                    <h6><font color="#7fffd4">欢迎来到购物商场</font></h6>
+                    <p><font color="#8b008b">没有你买不到的，只有你想不到，嗨起来，钞票花起来。</font></p>
                 </div>
-            @endforeach
+                <div class="social-media">
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-google"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                </div>
+                <div class="copyright">
+                    <span><font color="#b22222">2020年7月22日</font></span>
+                </div>
+            </div>
         </div>
-        <div class="pagination-product">
-            <ul>
-                <li class="active">1</li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-                <li><a href="">4</a></li>
-                <li><a href="">5</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- end product -->
+        <!-- end footer -->
 
-<!-- loader -->
-<div id="fakeLoader"></div>
-<!-- end loader -->
-<<<<<<< HEAD
-@extends('layout.link')
-=======
-
-<!-- footer -->
-<div class="footer">
-    <div class="container">
-        <div class="about-us-foot">
-            <h6><font color="#7fffd4">欢迎来到购物商场</font></h6>
-            <p><font color="#8b008b">没有你买不到的，只有你想不到，嗨起来，钞票花起来。</font></p>
-        </div>
-        <div class="social-media">
-            <a href=""><i class="fa fa-facebook"></i></a>
-            <a href=""><i class="fa fa-twitter"></i></a>
-            <a href=""><i class="fa fa-google"></i></a>
-            <a href=""><i class="fa fa-linkedin"></i></a>
-            <a href=""><i class="fa fa-instagram"></i></a>
-        </div>
-        <div class="copyright">
-            <span><font color="#b22222">2020年7月22日</font></span>
-        </div>
-    </div>
-</div>
-<!-- end footer -->
-
-<!-- scripts -->
+        <!-- scripts -->
 @extends('.layout.script')
 
 </body>
 </html>
->>>>>>> master
