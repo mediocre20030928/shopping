@@ -1,7 +1,7 @@
 <div class="navbar-top">
     <!-- site brand	 -->
     <div class="site-brand">
-        <a href="index.html"><h1>Mstore</h1></a>
+        <a href="index.html"><h1>项目</h1></a>
     </div>
     <!-- end site brand	 -->
     <div class="side-nav-panel-right">

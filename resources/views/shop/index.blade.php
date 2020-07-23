@@ -1,5 +1,45 @@
+<<<<<<< HEAD
 @extends('.layout.script')
         <!-- menu -->
+=======
+@extends('layout.link')
+<body>
+<!-- navbar top -->
+<div class="navbar-top">
+    <!-- site brand	 -->
+    <div class="site-brand">
+        <a href="index.html"><h1>商品商场</h1></a>
+    </div>
+    <!-- end site brand	 -->
+    <div class="side-nav-panel-right">
+        <a href="#" data-activates="slide-out-right" class="side-nav-left"><i class="fa fa-user"></i></a>
+    </div>
+</div>
+
+<!-- end navbar top -->
+
+<!-- side nav right-->
+<div class="side-nav-panel-right">
+    <ul id="slide-out-right" class="side-nav side-nav-panel collapsible">
+        <li class="profil">
+            <img src="/static/shop/img/profile.jpg" alt="">
+            <h2>John Doe</h2>
+        </li>
+        <li><a href="setting.html"><i class="fa fa-cog"></i>Settings</a></li>
+        <li><a href="about-us.html"><i class="fa fa-user"></i>About Us</a></li>
+        <li><a href="contact.html"><i class="fa fa-envelope-o"></i>Contact Us</a></li>
+        <li><a href="login.html"><i class="fa fa-sign-in"></i>Login</a></li>
+        <li><a href="register.html"><i class="fa fa-user-plus"></i>Register</a></li>
+    </ul>
+</div>
+<!-- end side nav right-->
+
+<!-- navbar bottom -->
+@extends('.layout.footer')
+        <!-- end navbar bottom -->
+
+<!-- menu -->
+>>>>>>> master
 <div class="menus" id="animatedModal2">
     <div class="close-animatedModal2 close-icon">
         <i class="fa fa-close"></i>
@@ -292,7 +332,7 @@
             <div class="caption slider-content  center-align">
                 <h2>WELCOME TO MSTORE</h2>
                 <h4>Lorem ipsum dolor sit amet.</h4>
-                <a href="" class="btn button-default">SHOP NOW</a>
+                <a href="/shop/test1/ceater" class="btn button-default">SHOP NOW</a>
             </div>
         </li>
         <li>
@@ -364,23 +404,19 @@
 <!-- end features -->
 
 <!-- quote -->
-<div class="section quote">
-    <div class="container">
-        <h4>FASHION UP TO 50% OFF</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus illo hic iure eveniet</p>
-    </div>
-</div>
 <!-- end quote -->
 
 <!-- product -->
 <div class="section product">
     <div class="container">
         <div class="section-head">
-            <h4>NEW PRODUCT</h4>
+            <hr>
+            <h4><font color="#b22222">商品最新</font></h4>
             <div class="divider-top"></div>
             <div class="divider-bottom"></div>
         </div>
         <div class="row">
+<<<<<<< HEAD
             @foreach($is_new as $v)
                 <div class="col s6">
                     <div class="content">
@@ -396,30 +432,50 @@
         </div>
 
     </div>
+=======
+            <div class="col s6">
+                @foreach($pwa as $v)
+                <div class="content">
+                    <img src="{{$v->goods_img}}" alt="">
+                    <h6><a href="">{{$v->goods_name}}</a></h6>
+                    <div class="price">
+                       ${{$v->shop_price}} <span>${{$v->click_count}}</span>
+                    </div>
+                 <a href=""><button class="btn button-default"><font color="#a52a2a">加入购物车</font></button></a>
+                </div>
+                    @endforeach
+            </div>
+            <div class="col s6">
+                @foreach($get as $v)
+                <div class="content">
+                    <img src="{{$v->goods_img}}" alt="">
+                    <h6><a href="">{{$v->goods_name}}</a></h6>
+                    <div class="price">
+                        ${{$v->shop_price}} <span>${{$v->click_count}}</span>
+                    </div>
+                    <a href=""><button class="btn button-default"><font color="#a52a2a">加入购物车</font></button></a>
+                </div>
+                    @endforeach
+            </div>
+>>>>>>> master
 </div>
 <!-- end product -->
 
 <!-- promo -->
-<div class="promo section">
-    <div class="container">
-        <div class="content">
-            <h4>PRODUCT BUNDLE</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-            <button class="btn button-default">SHOP NOW</button>
-        </div>
-    </div>
-</div>
+
 <!-- end promo -->
 
 <!-- product -->
 <div class="section product">
     <div class="container">
         <div class="section-head">
-            <h4>TOP PRODUCT</h4>
+            <hr>
+            <h4><font color="blue">商品最热</font></h4>
             <div class="divider-top"></div>
             <div class="divider-bottom"></div>
         </div>
         <div class="row">
+<<<<<<< HEAD
             @foreach($best as $v)
                 <div class="col s6">
                     <div class="content">
@@ -430,6 +486,30 @@
                         </div>
                         <a href="/cart"><button class="btn button-default">加入购物车</button></a>
                     </div>
+=======
+            <div class="col s6">
+                <div class="content">
+                    @foreach($get as $v)
+                    <img src="{{$v->goods_img}}" alt="">
+                    <h6><a href="">{{$v->goods_name}}</a></h6>
+                    <div class="price">
+                        ${{$v->shop_price}} <span>${{$v->click_count}}</span>
+                    </div>
+                        <a href=""><button class="btn button-default"><font color="#8a2be2">加入购物车</font></button></a>
+                    @endforeach
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="content">
+                    @foreach($pwa as $v)
+                    <img src="{{$v->goods_img}}" alt="">
+                    <h6><a href="">{{$v->goods_name}}</a></h6>
+                    <div class="price">
+                        ${{$v->shop_price}} <span>${{$v->click_count}}</span>
+                    </div>
+                        <a href=""><button class="btn button-default"><font color="aqua">加入购物车</font></button></a>
+                    @endforeach
+>>>>>>> master
                 </div>
             @endforeach
         </div>
@@ -449,4 +529,34 @@
 <!-- loader -->
 <div id="fakeLoader"></div>
 <!-- end loader -->
+<<<<<<< HEAD
 @extends('layout.link')
+=======
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="about-us-foot">
+            <h6><font color="#7fffd4">欢迎来到购物商场</font></h6>
+            <p><font color="#8b008b">没有你买不到的，只有你想不到，嗨起来，钞票花起来。</font></p>
+        </div>
+        <div class="social-media">
+            <a href=""><i class="fa fa-facebook"></i></a>
+            <a href=""><i class="fa fa-twitter"></i></a>
+            <a href=""><i class="fa fa-google"></i></a>
+            <a href=""><i class="fa fa-linkedin"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
+        </div>
+        <div class="copyright">
+            <span><font color="#b22222">2020年7月22日</font></span>
+        </div>
+    </div>
+</div>
+<!-- end footer -->
+
+<!-- scripts -->
+@extends('.layout.script')
+
+</body>
+</html>
+>>>>>>> master
