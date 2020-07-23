@@ -1,40 +1,5 @@
-@extends('layout.link')
-<body>
-<!-- navbar top -->
-<div class="navbar-top">
-    <!-- site brand	 -->
-    <div class="site-brand">
-        <a href="index.html"><h1>Mstore</h1></a>
-    </div>
-    <!-- end site brand	 -->
-    <div class="side-nav-panel-right">
-        <a href="#" data-activates="slide-out-right" class="side-nav-left"><i class="fa fa-user"></i></a>
-    </div>
-</div>
-
-<!-- end navbar top -->
-
-<!-- side nav right-->
-<div class="side-nav-panel-right">
-    <ul id="slide-out-right" class="side-nav side-nav-panel collapsible">
-        <li class="profil">
-            <img src="/static/shop/img/profile.jpg" alt="">
-            <h2>John Doe</h2>
-        </li>
-        <li><a href="setting.html"><i class="fa fa-cog"></i>Settings</a></li>
-        <li><a href="about-us.html"><i class="fa fa-user"></i>About Us</a></li>
-        <li><a href="contact.html"><i class="fa fa-envelope-o"></i>Contact Us</a></li>
-        <li><a href="login.html"><i class="fa fa-sign-in"></i>Login</a></li>
-        <li><a href="register.html"><i class="fa fa-user-plus"></i>Register</a></li>
-    </ul>
-</div>
-<!-- end side nav right-->
-
-<!-- navbar bottom -->
-@extends('.layout.footer')
-<!-- end navbar bottom -->
-
-<!-- menu -->
+@extends('.layout.script')
+        <!-- menu -->
 <div class="menus" id="animatedModal2">
     <div class="close-animatedModal2 close-icon">
         <i class="fa fa-close"></i>
@@ -218,7 +183,7 @@
                     <div class="cart-1">
                         <div class="row">
                             <div class="col s5">
-                                <img src="/static/shop/img/cart-menu1.png" alt="">
+                                <img src="img/cart-menu1.png" alt="">
                             </div>
                             <div class="col s7">
                                 <h5><a href="">Fashion Men's</a></h5>
@@ -253,7 +218,7 @@
                     <div class="cart-2">
                         <div class="row">
                             <div class="col s5">
-                                <img  src="/static/shop/img/cart-menu2.png" alt="">
+                                <img src="img/cart-menu2.png" alt="">
                             </div>
                             <div class="col s7">
                                 <h5><a href="">Fashion Men's</a></h5>
@@ -323,7 +288,7 @@
 
     <ul class="slides">
         <li>
-            <img src="/static/shop/img/slide1.jpg" alt="">
+            <img src="img/slide1.jpg" alt="">
             <div class="caption slider-content  center-align">
                 <h2>WELCOME TO MSTORE</h2>
                 <h4>Lorem ipsum dolor sit amet.</h4>
@@ -331,7 +296,7 @@
             </div>
         </li>
         <li>
-            <img src="/static/shop/img/slide2.jpg" alt="">
+            <img src="img/slide2.jpg" alt="">
             <div class="caption slider-content center-align">
                 <h2>JACKETS BUSINESS</h2>
                 <h4>Lorem ipsum dolor sit amet.</h4>
@@ -339,7 +304,7 @@
             </div>
         </li>
         <li>
-            <img src="/static/shop/img/slide3.jpg" alt="">
+            <img src="img/slide3.jpg" alt="">
             <div class="caption slider-content center-align">
                 <h2>FASHION SHOP</h2>
                 <h4>Lorem ipsum dolor sit amet.</h4>
@@ -416,49 +381,20 @@
             <div class="divider-bottom"></div>
         </div>
         <div class="row">
-            <div class="col s6">
-                <div class="content">
-                    <img src="/static/shop/img/product-new1.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
-                    <div class="price">
-                        $20 <span>$28</span>
+            @foreach($is_new as $v)
+                <div class="col s6">
+                    <div class="content">
+                        <a href="/test1/ceater"> <img src="{{$v->goods_img}}" alt=""></a>
+                        <h6><a href="">{{$v->goods_name}}</a></h6>
+                        <div class="price">
+                            ${{$v->shop_price}} <span></span>
+                        </div>
+                        <a href=""><button class="btn button-default">加入购物车</button></a>
                     </div>
-                    <button class="btn button-default">ADD TO CART</button>
                 </div>
-            </div>
-            <div class="col s6">
-                <div class="content">
-                    <img src="/static/shop/img/product-new2.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
-                    <div class="price">
-                        $20 <span>$28</span>
-                    </div>
-                    <button class="btn button-default">ADD TO CART</button>
-                </div>
-            </div>
+            @endforeach
         </div>
-        <div class="row margin-bottom">
-            <div class="col s6">
-                <div class="content">
-                    <img src="/static/shop/img/product-new3.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
-                    <div class="price">
-                        $20 <span>$28</span>
-                    </div>
-                    <button class="btn button-default">ADD TO CART</button>
-                </div>
-            </div>
-            <div class="col s6">
-                <div class="content">
-                    <img src="/static/shop/img/product-new4.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
-                    <div class="price">
-                        $20 <span>$28</span>
-                    </div>
-                    <button class="btn button-default">ADD TO CART</button>
-                </div>
-            </div>
-        </div>
+
     </div>
 </div>
 <!-- end product -->
@@ -484,48 +420,18 @@
             <div class="divider-bottom"></div>
         </div>
         <div class="row">
-            <div class="col s6">
-                <div class="content">
-                    <img src="/static/shop/img/product-new1.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
-                    <div class="price">
-                        $20 <span>$28</span>
+            @foreach($best as $v)
+                <div class="col s6">
+                    <div class="content">
+                        <a href="/detail"> <img src="{{$v->goods_img}}" alt=""></a>
+                        <h6>{{$v->goods_name}}</h6>
+                        <div class="price">
+                            ${{$v->shop_price}}
+                        </div>
+                        <a href="/cart"><button class="btn button-default">加入购物车</button></a>
                     </div>
-                    <button class="btn button-default">ADD TO CART</button>
                 </div>
-            </div>
-            <div class="col s6">
-                <div class="content">
-                    <img src="/static/shop/img/product-new2.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
-                    <div class="price">
-                        $20 <span>$28</span>
-                    </div>
-                    <button class="btn button-default">ADD TO CART</button>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s6">
-                <div class="content">
-                    <img src="/static/shop/img/product-new3.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
-                    <div class="price">
-                        $20 <span>$28</span>
-                    </div>
-                    <button class="btn button-default">ADD TO CART</button>
-                </div>
-            </div>
-            <div class="col s6">
-                <div class="content">
-                    <img src="/static/shop/img/product-new4.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
-                    <div class="price">
-                        $20 <span>$28</span>
-                    </div>
-                    <button class="btn button-default">ADD TO CART</button>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="pagination-product">
             <ul>
@@ -543,30 +449,4 @@
 <!-- loader -->
 <div id="fakeLoader"></div>
 <!-- end loader -->
-
-<!-- footer -->
-<div class="footer">
-    <div class="container">
-        <div class="about-us-foot">
-            <h6>Mstore</h6>
-            <p>is a lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit.</p>
-        </div>
-        <div class="social-media">
-            <a href=""><i class="fa fa-facebook"></i></a>
-            <a href=""><i class="fa fa-twitter"></i></a>
-            <a href=""><i class="fa fa-google"></i></a>
-            <a href=""><i class="fa fa-linkedin"></i></a>
-            <a href=""><i class="fa fa-instagram"></i></a>
-        </div>
-        <div class="copyright">
-            <span>© 2017 All Right Reserved</span>
-        </div>
-    </div>
-</div>
-<!-- end footer -->
-
-<!-- scripts -->
-@extends('.layout.script')
-
-</body>
-</html>
+@extends('layout.link')
