@@ -35,10 +35,8 @@ Route::prefix('/shop')->group(function(){
     Route::get('/r','Index\CategoryController@r');
     Route::get('/fl','Index\CategoryController@fl');
 
-    Route::get('/brand_add','Index\BrandController@brand_add'); //分类添加视图
-    Route::post('/brand_add','Index\BrandController@brand_addDo'); //分类执行添加
-    Route::get('/category','Index\CategoryController@category'); //分类执行添加
-
+    Route::get('/category','Index\CategoryController@category');
+    Route::get('/test3','Index\CategoryController@test3'); //分类执行添加
 
 });
 

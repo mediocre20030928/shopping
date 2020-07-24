@@ -329,15 +329,10 @@
             <select>
                 <option value="0">--请选择--</option>
                 @foreach($cate_all_data as $k=>$v)
-                    <option value="{{$v['cat_id']}}">{{$v['cat_name']}}</option>
+                    <option value="{{$v['type_id']}}">{{str_repeat('-|',$v['le'])}}{{$v['type_name']}}</option>
                 @endforeach
             </select>
-            {{--<select name="parent_id">--}}
-                   {{--<option value="0">--请选择--</option>--}}
-                {{--@foreach($list as $v)--}}
-                   {{--<option value="{{$v->cate_id}}">{{str_repeat('-|',$v->le)}}{{$v->cate_name}}}</option>--}}
-                {{--@endforeach--}}
-            {{--</select>--}}
+        
         </div>
 
 
@@ -345,70 +340,34 @@
 
         <div class="row">
             <div class="col s6">
+                @foreach($get as $v)
                 <div class="content">
-                    <img src="/static/shop/img/product-new1.png" alt="">
+                    <a href="/shop/test1/ceater"><img src="{{$v->goods_img}}" alt=""></a>
                     <h6><a href="">Fashion Men's</a></h6>
                     <div class="price">
                         $20 <span>$28</span>
                     </div>
                     <button class="btn button-default">ADD TO CART</button>
                 </div>
+                 @endforeach
             </div>
             <div class="col s6">
+                @foreach($pwa as $v)
                 <div class="content">
-                    <img src="/static/shop/img/product-new2.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
+                    <a href="/shop/test1/ceater"><img src="{{$v->goods_img}}" alt=""></a>
+                    <h6><a href="">{{$v->goods_name}}</a></h6>
                     <div class="price">
-                        $20 <span>$28</span>
+                        {{--折{{$v->shop_price}} <span>{{$v->click_count}}</span>--}}
+                        <span> ${{$v->click_count}}</span>&nbsp; 折${{$v->shop_price}}
                     </div>
-                    <button class="btn button-default">ADD TO CART</button>
+                    {{--<button class="btn button-default">ADD TO CART</button>--}}
+                    <a href=""><button class="btn button-default"><font color="#8a2be2">加入购物车</font></button></a>
                 </div>
+                @endforeach
             </div>
         </div>
-        <div class="row margin-bottom">
-            <div class="col s6">
-                <div class="content">
-                    <img src="/static/shop/img/product-new3.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
-                    <div class="price">
-                        $20 <span>$28</span>
-                    </div>
-                    <button class="btn button-default">ADD TO CART</button>
-                </div>
-            </div>
-            <div class="col s6">
-                <div class="content">
-                    <img src="/static/shop/img/product-new4.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
-                    <div class="price">
-                        $20 <span>$28</span>
-                    </div>
-                    <button class="btn button-default">ADD TO CART</button>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s6">
-                <div class="content">
-                    <img src="/static/shop/img/product-new3.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
-                    <div class="price">
-                        $20 <span>$28</span>
-                    </div>
-                    <button class="btn button-default">ADD TO CART</button>
-                </div>
-            </div>
-            <div class="col s6">
-                <div class="content">
-                    <img src="/static/shop/img/product-new4.png" alt="">
-                    <h6><a href="">Fashion Men's</a></h6>
-                    <div class="price">
-                        $20 <span>$28</span>
-                    </div>
-                    <button class="btn button-default">ADD TO CART</button>
-                </div>
-            </div>
-        </div>
+
+
         <div class="pagination-product">
             <ul>
                 <li class="active">1</li>
