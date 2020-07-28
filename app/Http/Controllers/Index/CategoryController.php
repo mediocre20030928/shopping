@@ -45,6 +45,9 @@ class CategoryController extends Controller
 //       return view('shop.category',['list'=>$get]);
 //   }
 
+     public function login(){
+         return view('shop.login');
+     }
 
 
 }

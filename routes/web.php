@@ -37,6 +37,6 @@ Route::prefix('/shop')->group(function(){
 
     Route::get('/category','Index\CategoryController@category');
     Route::get('/test3','Index\CategoryController@test3'); //分类执行添加
-
+    Route::get('/login','Index\CategoryController@login'); //分类执行添加
 });
 
